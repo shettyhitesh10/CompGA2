@@ -1,1 +1,0 @@
-kirie otan anoiksete to solution file tha sizitisei na kanete convert. kata tin diarkeia t conversion tha zitisei na kanei overwrite ena vcxproj arxeio. gia na mporesei na dulepsei i ergasia den prp na ginei overwrite (an ginei overwrite afera ta nea .h k .c arxeia p prosthesa)
