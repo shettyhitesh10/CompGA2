@@ -1,0 +1,110 @@
+\hypertarget{image___d_x_t_8c}{}\doxysection{image\+\_\+\+D\+X\+T.\+c File Reference}
+\label{image___d_x_t_8c}\index{image\_DXT.c@{image\_DXT.c}}
+{\ttfamily \#include \char`\"{}image\+\_\+\+D\+X\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{image___d_x_t_8c_a7d030d5d3e4d7e4c30b2fe625bf9c763}{U\+S\+E\+\_\+\+C\+O\+V\+\_\+\+M\+AT}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{image___d_x_t_8c_a8c564f0bdc722dd81f4f49a4d9581996}{compress\+\_\+\+D\+D\+S\+\_\+color\+\_\+block}} (int channels, const unsigned char $\ast$const uncompressed, unsigned char compressed\mbox{[}8\mbox{]})
+\item 
+void \mbox{\hyperlink{image___d_x_t_8c_a5c0321ed31f3a345d9fc0aa08aa0db9c}{compress\+\_\+\+D\+D\+S\+\_\+alpha\+\_\+block}} (const unsigned char $\ast$const uncompressed, unsigned char compressed\mbox{[}8\mbox{]})
+\item 
+int \mbox{\hyperlink{image___d_x_t_8c_af02dc8b928fbb3014cab9643bb7c3c79}{save\+\_\+image\+\_\+as\+\_\+\+D\+DS}} (const char $\ast$filename, int width, int height, int channels, const unsigned char $\ast$const data)
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{image___d_x_t_8c_ad164378a9b8093b1435b60a269105822}{convert\+\_\+image\+\_\+to\+\_\+\+D\+X\+T1}} (const unsigned char $\ast$const uncompressed, int width, int height, int channels, int $\ast$out\+\_\+size)
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{image___d_x_t_8c_a1a7750a6794ab39ef5c3c592ceca1eb0}{convert\+\_\+image\+\_\+to\+\_\+\+D\+X\+T5}} (const unsigned char $\ast$const uncompressed, int width, int height, int channels, int $\ast$out\+\_\+size)
+\item 
+int \mbox{\hyperlink{image___d_x_t_8c_a043573213c03978477775bd0561aaed2}{convert\+\_\+bit\+\_\+range}} (int c, int from\+\_\+bits, int to\+\_\+bits)
+\item 
+int \mbox{\hyperlink{image___d_x_t_8c_a210e6ef74fbbfd0d65fb1f8724ad024e}{rgb\+\_\+to\+\_\+565}} (int r, int g, int b)
+\item 
+void \mbox{\hyperlink{image___d_x_t_8c_a3438481c796d9c50c8de2840b13b5a41}{rgb\+\_\+888\+\_\+from\+\_\+565}} (unsigned int c, int $\ast$r, int $\ast$g, int $\ast$b)
+\item 
+void \mbox{\hyperlink{image___d_x_t_8c_ab25e22befea7f155a9a9a392ed5e0e7e}{compute\+\_\+color\+\_\+line\+\_\+\+S\+T\+D\+EV}} (const unsigned char $\ast$const uncompressed, int channels, float point\mbox{[}3\mbox{]}, float direction\mbox{[}3\mbox{]})
+\item 
+void \mbox{\hyperlink{image___d_x_t_8c_a03acd1435baf9e058723bd46b9452209}{L\+S\+E\+\_\+master\+\_\+colors\+\_\+max\+\_\+min}} (int $\ast$cmax, int $\ast$cmin, int channels, const unsigned char $\ast$const uncompressed)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{image___d_x_t_8c_a7d030d5d3e4d7e4c30b2fe625bf9c763}\label{image___d_x_t_8c_a7d030d5d3e4d7e4c30b2fe625bf9c763}} 
+\index{image\_DXT.c@{image\_DXT.c}!USE\_COV\_MAT@{USE\_COV\_MAT}}
+\index{USE\_COV\_MAT@{USE\_COV\_MAT}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{USE\_COV\_MAT}{USE\_COV\_MAT}}
+{\footnotesize\ttfamily \#define U\+S\+E\+\_\+\+C\+O\+V\+\_\+\+M\+AT~1}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{image___d_x_t_8c_a5c0321ed31f3a345d9fc0aa08aa0db9c}\label{image___d_x_t_8c_a5c0321ed31f3a345d9fc0aa08aa0db9c}} 
+\index{image\_DXT.c@{image\_DXT.c}!compress\_DDS\_alpha\_block@{compress\_DDS\_alpha\_block}}
+\index{compress\_DDS\_alpha\_block@{compress\_DDS\_alpha\_block}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{compress\_DDS\_alpha\_block()}{compress\_DDS\_alpha\_block()}}
+{\footnotesize\ttfamily void compress\+\_\+\+D\+D\+S\+\_\+alpha\+\_\+block (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{uncompressed,  }\item[{unsigned char}]{compressed\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image___d_x_t_8c_a8c564f0bdc722dd81f4f49a4d9581996}\label{image___d_x_t_8c_a8c564f0bdc722dd81f4f49a4d9581996}} 
+\index{image\_DXT.c@{image\_DXT.c}!compress\_DDS\_color\_block@{compress\_DDS\_color\_block}}
+\index{compress\_DDS\_color\_block@{compress\_DDS\_color\_block}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{compress\_DDS\_color\_block()}{compress\_DDS\_color\_block()}}
+{\footnotesize\ttfamily void compress\+\_\+\+D\+D\+S\+\_\+color\+\_\+block (\begin{DoxyParamCaption}\item[{int}]{channels,  }\item[{const unsigned char $\ast$const}]{uncompressed,  }\item[{unsigned char}]{compressed\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image___d_x_t_8c_ab25e22befea7f155a9a9a392ed5e0e7e}\label{image___d_x_t_8c_ab25e22befea7f155a9a9a392ed5e0e7e}} 
+\index{image\_DXT.c@{image\_DXT.c}!compute\_color\_line\_STDEV@{compute\_color\_line\_STDEV}}
+\index{compute\_color\_line\_STDEV@{compute\_color\_line\_STDEV}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{compute\_color\_line\_STDEV()}{compute\_color\_line\_STDEV()}}
+{\footnotesize\ttfamily void compute\+\_\+color\+\_\+line\+\_\+\+S\+T\+D\+EV (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{uncompressed,  }\item[{int}]{channels,  }\item[{float}]{point\mbox{[}3\mbox{]},  }\item[{float}]{direction\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image___d_x_t_8c_a043573213c03978477775bd0561aaed2}\label{image___d_x_t_8c_a043573213c03978477775bd0561aaed2}} 
+\index{image\_DXT.c@{image\_DXT.c}!convert\_bit\_range@{convert\_bit\_range}}
+\index{convert\_bit\_range@{convert\_bit\_range}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{convert\_bit\_range()}{convert\_bit\_range()}}
+{\footnotesize\ttfamily int convert\+\_\+bit\+\_\+range (\begin{DoxyParamCaption}\item[{int}]{c,  }\item[{int}]{from\+\_\+bits,  }\item[{int}]{to\+\_\+bits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image___d_x_t_8c_ad164378a9b8093b1435b60a269105822}\label{image___d_x_t_8c_ad164378a9b8093b1435b60a269105822}} 
+\index{image\_DXT.c@{image\_DXT.c}!convert\_image\_to\_DXT1@{convert\_image\_to\_DXT1}}
+\index{convert\_image\_to\_DXT1@{convert\_image\_to\_DXT1}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{convert\_image\_to\_DXT1()}{convert\_image\_to\_DXT1()}}
+{\footnotesize\ttfamily unsigned char$\ast$ convert\+\_\+image\+\_\+to\+\_\+\+D\+X\+T1 (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{uncompressed,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{int $\ast$}]{out\+\_\+size }\end{DoxyParamCaption})}
+
+take an image and convert it to D\+X\+T1 (no alpha) \mbox{\Hypertarget{image___d_x_t_8c_a1a7750a6794ab39ef5c3c592ceca1eb0}\label{image___d_x_t_8c_a1a7750a6794ab39ef5c3c592ceca1eb0}} 
+\index{image\_DXT.c@{image\_DXT.c}!convert\_image\_to\_DXT5@{convert\_image\_to\_DXT5}}
+\index{convert\_image\_to\_DXT5@{convert\_image\_to\_DXT5}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{convert\_image\_to\_DXT5()}{convert\_image\_to\_DXT5()}}
+{\footnotesize\ttfamily unsigned char$\ast$ convert\+\_\+image\+\_\+to\+\_\+\+D\+X\+T5 (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{uncompressed,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{int $\ast$}]{out\+\_\+size }\end{DoxyParamCaption})}
+
+take an image and convert it to D\+X\+T5 (with alpha) \mbox{\Hypertarget{image___d_x_t_8c_a03acd1435baf9e058723bd46b9452209}\label{image___d_x_t_8c_a03acd1435baf9e058723bd46b9452209}} 
+\index{image\_DXT.c@{image\_DXT.c}!LSE\_master\_colors\_max\_min@{LSE\_master\_colors\_max\_min}}
+\index{LSE\_master\_colors\_max\_min@{LSE\_master\_colors\_max\_min}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{LSE\_master\_colors\_max\_min()}{LSE\_master\_colors\_max\_min()}}
+{\footnotesize\ttfamily void L\+S\+E\+\_\+master\+\_\+colors\+\_\+max\+\_\+min (\begin{DoxyParamCaption}\item[{int $\ast$}]{cmax,  }\item[{int $\ast$}]{cmin,  }\item[{int}]{channels,  }\item[{const unsigned char $\ast$const}]{uncompressed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image___d_x_t_8c_a3438481c796d9c50c8de2840b13b5a41}\label{image___d_x_t_8c_a3438481c796d9c50c8de2840b13b5a41}} 
+\index{image\_DXT.c@{image\_DXT.c}!rgb\_888\_from\_565@{rgb\_888\_from\_565}}
+\index{rgb\_888\_from\_565@{rgb\_888\_from\_565}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{rgb\_888\_from\_565()}{rgb\_888\_from\_565()}}
+{\footnotesize\ttfamily void rgb\+\_\+888\+\_\+from\+\_\+565 (\begin{DoxyParamCaption}\item[{unsigned int}]{c,  }\item[{int $\ast$}]{r,  }\item[{int $\ast$}]{g,  }\item[{int $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image___d_x_t_8c_a210e6ef74fbbfd0d65fb1f8724ad024e}\label{image___d_x_t_8c_a210e6ef74fbbfd0d65fb1f8724ad024e}} 
+\index{image\_DXT.c@{image\_DXT.c}!rgb\_to\_565@{rgb\_to\_565}}
+\index{rgb\_to\_565@{rgb\_to\_565}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{rgb\_to\_565()}{rgb\_to\_565()}}
+{\footnotesize\ttfamily int rgb\+\_\+to\+\_\+565 (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image___d_x_t_8c_af02dc8b928fbb3014cab9643bb7c3c79}\label{image___d_x_t_8c_af02dc8b928fbb3014cab9643bb7c3c79}} 
+\index{image\_DXT.c@{image\_DXT.c}!save\_image\_as\_DDS@{save\_image\_as\_DDS}}
+\index{save\_image\_as\_DDS@{save\_image\_as\_DDS}!image\_DXT.c@{image\_DXT.c}}
+\doxysubsubsection{\texorpdfstring{save\_image\_as\_DDS()}{save\_image\_as\_DDS()}}
+{\footnotesize\ttfamily int save\+\_\+image\+\_\+as\+\_\+\+D\+DS (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{const unsigned char $\ast$const}]{data }\end{DoxyParamCaption})}
+
+Converts an image from an array of unsigned chars (R\+GB or R\+G\+BA) to D\+X\+T1 or D\+X\+T5, then saves the converted image to disk. \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}

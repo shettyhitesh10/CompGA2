@@ -1,0 +1,278 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$gl/glut.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$windowsx.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}S\+O\+I\+L.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a6765cdcebe5c8445969d5f76345df457}{render}} (void)
+\item 
+void \mbox{\hyperlink{main_8cpp_a5ba6efd1fa4e512cbac5bcc059b0c4d4}{init\+Lights}} (void)
+\item 
+bool \mbox{\hyperlink{main_8cpp_a988e7824fd6ad20a5ad876f9438cded8}{init}} (void)
+\item 
+void \mbox{\hyperlink{main_8cpp_acc1ffe65e6869931318610cae7210078}{reshape}} (int w, int h)
+\item 
+void \mbox{\hyperlink{main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}{keyboard}} (unsigned char key, int x, int y)
+\begin{DoxyCompactList}\small\item\em Keyboard Handler \+: Normal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a990990f5c8e393ed78abe12bd25ab153}{special\+\_\+keys}} (int a\+\_\+keys, int x, int y)
+\begin{DoxyCompactList}\small\item\em Keyboard Handler \+: Special Keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_aa488a376beba69e2d6414a2191fd7a25}{table\+Leg}} (double thick, double len)
+\item 
+void \mbox{\hyperlink{main_8cpp_a383958dfc86d290dea469524cde98638}{table}} (double top\+Wid, double top\+Thick, double leg\+Thick, double leg\+Len)
+\item 
+void \mbox{\hyperlink{main_8cpp_ac91124e44d03770b1d9ca03a814c9b45}{drawchair}} (double top\+Wid, double top\+Thick, double leg\+Thick, double leg\+Len)
+\item 
+void \mbox{\hyperlink{main_8cpp_ad82a8c7b8ef5a6b1b613add4be0bfd0b}{chair\+Leg}} (double thick, double len)
+\item 
+void \mbox{\hyperlink{main_8cpp_afe5bc3e67bca13dab6fb0a8772737c79}{Draw\+Vase}} (float x, float y, float z, float size)
+\item 
+void \mbox{\hyperlink{main_8cpp_aaa5a047ba5b747c9c88ea3e15113ad94}{Draw\+Room}} (float x, float y, float z, float size)
+\item 
+void \mbox{\hyperlink{main_8cpp_a9d5546c6fdc3a6b43380c32c6884059b}{make\+Cylinder}} (float height, float base1, float base2, int rgb)
+\item 
+void \mbox{\hyperlink{main_8cpp_abfa98322d532bf81b3998ba0aae73d82}{position\+Camera}} ()
+\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Main Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_aa23b6ff8d4270169e3d5a37e9fa97820}{g\+\_\+gamemode}}
+\begin{DoxyCompactList}\small\item\em The GL Utility Toolkit (G\+L\+UT) Header. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a4d8cc4c5de81332c2194e29184884874}{g\+\_\+fullscreen}}
+\begin{DoxyCompactList}\small\item\em G\+L\+UT Game\+Mode O\+N/\+O\+FF. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a9761f252c49593caab8b5434a258388f}{b\+\_\+culling}} = false
+\begin{DoxyCompactList}\small\item\em Fullscreen Mode O\+N/\+O\+FF (When g\+\_\+gamemode Is O\+FF) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8cpp_a55f4de4cbfd03a9857b1926425be0c6b}{aspect}} = 1
+\item 
+float \mbox{\hyperlink{main_8cpp_a6cab3a827924c0b146f7d80db0cd28f9}{strafez}} =0
+\item 
+int \mbox{\hyperlink{main_8cpp_ac55d00d9ba909364e5372d503d564b4f}{camx}} =-\/45
+\item 
+int \mbox{\hyperlink{main_8cpp_a364998aaa6cc1571bbfe405476b12b40}{camz}} =0
+\item 
+float \mbox{\hyperlink{main_8cpp_ae1aaa18512a5af1b1138e82db0afb999}{camy}} =25
+\item 
+const float \mbox{\hyperlink{main_8cpp_aa08a577393243b86dfd2a97e61443673}{PI}} = 3.\+1415926535897932384626433832795028
+\item 
+const float \mbox{\hyperlink{main_8cpp_af0a8f7690ee367012c717b49e66634b1}{epsilon}} = 0.\+001
+\item 
+G\+Luint \mbox{\hyperlink{main_8cpp_a169b9f06ff313a85f57f45c8bb9a2159}{texid}}
+\item 
+int \mbox{\hyperlink{main_8cpp_aff44b5bf716f2602bc74b3d5e17a0d77}{strafex}} =0
+\item 
+int \mbox{\hyperlink{main_8cpp_af85e412ed21c416a58cce6ce2e0a9c53}{strafey}} =0
+\item 
+float \mbox{\hyperlink{main_8cpp_a41ee34425341ab8b6f9d3b0bb526d9ce}{move}} =1.\+2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ad82a8c7b8ef5a6b1b613add4be0bfd0b}\label{main_8cpp_ad82a8c7b8ef5a6b1b613add4be0bfd0b}} 
+\index{main.cpp@{main.cpp}!chairLeg@{chairLeg}}
+\index{chairLeg@{chairLeg}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{chairLeg()}{chairLeg()}}
+{\footnotesize\ttfamily void chair\+Leg (\begin{DoxyParamCaption}\item[{double}]{thick,  }\item[{double}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_ac91124e44d03770b1d9ca03a814c9b45}\label{main_8cpp_ac91124e44d03770b1d9ca03a814c9b45}} 
+\index{main.cpp@{main.cpp}!drawchair@{drawchair}}
+\index{drawchair@{drawchair}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{drawchair()}{drawchair()}}
+{\footnotesize\ttfamily void drawchair (\begin{DoxyParamCaption}\item[{double}]{top\+Wid,  }\item[{double}]{top\+Thick,  }\item[{double}]{leg\+Thick,  }\item[{double}]{leg\+Len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_aaa5a047ba5b747c9c88ea3e15113ad94}\label{main_8cpp_aaa5a047ba5b747c9c88ea3e15113ad94}} 
+\index{main.cpp@{main.cpp}!DrawRoom@{DrawRoom}}
+\index{DrawRoom@{DrawRoom}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawRoom()}{DrawRoom()}}
+{\footnotesize\ttfamily void Draw\+Room (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_afe5bc3e67bca13dab6fb0a8772737c79}\label{main_8cpp_afe5bc3e67bca13dab6fb0a8772737c79}} 
+\index{main.cpp@{main.cpp}!DrawVase@{DrawVase}}
+\index{DrawVase@{DrawVase}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawVase()}{DrawVase()}}
+{\footnotesize\ttfamily void Draw\+Vase (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a988e7824fd6ad20a5ad876f9438cded8}\label{main_8cpp_a988e7824fd6ad20a5ad876f9438cded8}} 
+\index{main.cpp@{main.cpp}!init@{init}}
+\index{init@{init}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a5ba6efd1fa4e512cbac5bcc059b0c4d4}\label{main_8cpp_a5ba6efd1fa4e512cbac5bcc059b0c4d4}} 
+\index{main.cpp@{main.cpp}!initLights@{initLights}}
+\index{initLights@{initLights}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{initLights()}{initLights()}}
+{\footnotesize\ttfamily void init\+Lights (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}\label{main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}} 
+\index{main.cpp@{main.cpp}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{keyboard()}{keyboard()}}
+{\footnotesize\ttfamily void keyboard (\begin{DoxyParamCaption}\item[{unsigned char}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Keyboard Handler \+: Normal. 
+
+\mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Main Function. 
+
+\mbox{\Hypertarget{main_8cpp_a9d5546c6fdc3a6b43380c32c6884059b}\label{main_8cpp_a9d5546c6fdc3a6b43380c32c6884059b}} 
+\index{main.cpp@{main.cpp}!makeCylinder@{makeCylinder}}
+\index{makeCylinder@{makeCylinder}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{makeCylinder()}{makeCylinder()}}
+{\footnotesize\ttfamily void make\+Cylinder (\begin{DoxyParamCaption}\item[{float}]{height,  }\item[{float}]{base1,  }\item[{float}]{base2,  }\item[{int}]{rgb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_abfa98322d532bf81b3998ba0aae73d82}\label{main_8cpp_abfa98322d532bf81b3998ba0aae73d82}} 
+\index{main.cpp@{main.cpp}!positionCamera@{positionCamera}}
+\index{positionCamera@{positionCamera}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{positionCamera()}{positionCamera()}}
+{\footnotesize\ttfamily void position\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a6765cdcebe5c8445969d5f76345df457}\label{main_8cpp_a6765cdcebe5c8445969d5f76345df457}} 
+\index{main.cpp@{main.cpp}!render@{render}}
+\index{render@{render}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void render (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_acc1ffe65e6869931318610cae7210078}\label{main_8cpp_acc1ffe65e6869931318610cae7210078}} 
+\index{main.cpp@{main.cpp}!reshape@{reshape}}
+\index{reshape@{reshape}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{reshape()}{reshape()}}
+{\footnotesize\ttfamily void reshape (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a990990f5c8e393ed78abe12bd25ab153}\label{main_8cpp_a990990f5c8e393ed78abe12bd25ab153}} 
+\index{main.cpp@{main.cpp}!special\_keys@{special\_keys}}
+\index{special\_keys@{special\_keys}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{special\_keys()}{special\_keys()}}
+{\footnotesize\ttfamily void special\+\_\+keys (\begin{DoxyParamCaption}\item[{int}]{a\+\_\+keys,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Keyboard Handler \+: Special Keys. 
+
+\mbox{\Hypertarget{main_8cpp_a383958dfc86d290dea469524cde98638}\label{main_8cpp_a383958dfc86d290dea469524cde98638}} 
+\index{main.cpp@{main.cpp}!table@{table}}
+\index{table@{table}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{table()}{table()}}
+{\footnotesize\ttfamily void table (\begin{DoxyParamCaption}\item[{double}]{top\+Wid,  }\item[{double}]{top\+Thick,  }\item[{double}]{leg\+Thick,  }\item[{double}]{leg\+Len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_aa488a376beba69e2d6414a2191fd7a25}\label{main_8cpp_aa488a376beba69e2d6414a2191fd7a25}} 
+\index{main.cpp@{main.cpp}!tableLeg@{tableLeg}}
+\index{tableLeg@{tableLeg}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{tableLeg()}{tableLeg()}}
+{\footnotesize\ttfamily void table\+Leg (\begin{DoxyParamCaption}\item[{double}]{thick,  }\item[{double}]{len }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a55f4de4cbfd03a9857b1926425be0c6b}\label{main_8cpp_a55f4de4cbfd03a9857b1926425be0c6b}} 
+\index{main.cpp@{main.cpp}!aspect@{aspect}}
+\index{aspect@{aspect}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{aspect}{aspect}}
+{\footnotesize\ttfamily float aspect = 1}
+
+\mbox{\Hypertarget{main_8cpp_a9761f252c49593caab8b5434a258388f}\label{main_8cpp_a9761f252c49593caab8b5434a258388f}} 
+\index{main.cpp@{main.cpp}!b\_culling@{b\_culling}}
+\index{b\_culling@{b\_culling}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{b\_culling}{b\_culling}}
+{\footnotesize\ttfamily bool b\+\_\+culling = false}
+
+
+
+Fullscreen Mode O\+N/\+O\+FF (When g\+\_\+gamemode Is O\+FF) 
+
+\mbox{\Hypertarget{main_8cpp_ac55d00d9ba909364e5372d503d564b4f}\label{main_8cpp_ac55d00d9ba909364e5372d503d564b4f}} 
+\index{main.cpp@{main.cpp}!camx@{camx}}
+\index{camx@{camx}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{camx}{camx}}
+{\footnotesize\ttfamily int camx =-\/45}
+
+\mbox{\Hypertarget{main_8cpp_ae1aaa18512a5af1b1138e82db0afb999}\label{main_8cpp_ae1aaa18512a5af1b1138e82db0afb999}} 
+\index{main.cpp@{main.cpp}!camy@{camy}}
+\index{camy@{camy}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{camy}{camy}}
+{\footnotesize\ttfamily float camy =25}
+
+\mbox{\Hypertarget{main_8cpp_a364998aaa6cc1571bbfe405476b12b40}\label{main_8cpp_a364998aaa6cc1571bbfe405476b12b40}} 
+\index{main.cpp@{main.cpp}!camz@{camz}}
+\index{camz@{camz}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{camz}{camz}}
+{\footnotesize\ttfamily int camz =0}
+
+\mbox{\Hypertarget{main_8cpp_af0a8f7690ee367012c717b49e66634b1}\label{main_8cpp_af0a8f7690ee367012c717b49e66634b1}} 
+\index{main.cpp@{main.cpp}!epsilon@{epsilon}}
+\index{epsilon@{epsilon}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{epsilon}{epsilon}}
+{\footnotesize\ttfamily const float epsilon = 0.\+001}
+
+\mbox{\Hypertarget{main_8cpp_a4d8cc4c5de81332c2194e29184884874}\label{main_8cpp_a4d8cc4c5de81332c2194e29184884874}} 
+\index{main.cpp@{main.cpp}!g\_fullscreen@{g\_fullscreen}}
+\index{g\_fullscreen@{g\_fullscreen}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_fullscreen}{g\_fullscreen}}
+{\footnotesize\ttfamily bool g\+\_\+fullscreen}
+
+
+
+G\+L\+UT Game\+Mode O\+N/\+O\+FF. 
+
+\mbox{\Hypertarget{main_8cpp_aa23b6ff8d4270169e3d5a37e9fa97820}\label{main_8cpp_aa23b6ff8d4270169e3d5a37e9fa97820}} 
+\index{main.cpp@{main.cpp}!g\_gamemode@{g\_gamemode}}
+\index{g\_gamemode@{g\_gamemode}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_gamemode}{g\_gamemode}}
+{\footnotesize\ttfamily bool g\+\_\+gamemode}
+
+
+
+The GL Utility Toolkit (G\+L\+UT) Header. 
+
+Standard C/\+C++ Input-\/\+Output Math Functions Standard Header For M\+S\+Windows Applications \mbox{\Hypertarget{main_8cpp_a41ee34425341ab8b6f9d3b0bb526d9ce}\label{main_8cpp_a41ee34425341ab8b6f9d3b0bb526d9ce}} 
+\index{main.cpp@{main.cpp}!move@{move}}
+\index{move@{move}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily float move =1.\+2}
+
+\mbox{\Hypertarget{main_8cpp_aa08a577393243b86dfd2a97e61443673}\label{main_8cpp_aa08a577393243b86dfd2a97e61443673}} 
+\index{main.cpp@{main.cpp}!PI@{PI}}
+\index{PI@{PI}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily const float PI = 3.\+1415926535897932384626433832795028}
+
+\mbox{\Hypertarget{main_8cpp_aff44b5bf716f2602bc74b3d5e17a0d77}\label{main_8cpp_aff44b5bf716f2602bc74b3d5e17a0d77}} 
+\index{main.cpp@{main.cpp}!strafex@{strafex}}
+\index{strafex@{strafex}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{strafex}{strafex}}
+{\footnotesize\ttfamily int strafex =0}
+
+\mbox{\Hypertarget{main_8cpp_af85e412ed21c416a58cce6ce2e0a9c53}\label{main_8cpp_af85e412ed21c416a58cce6ce2e0a9c53}} 
+\index{main.cpp@{main.cpp}!strafey@{strafey}}
+\index{strafey@{strafey}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{strafey}{strafey}}
+{\footnotesize\ttfamily int strafey =0}
+
+\mbox{\Hypertarget{main_8cpp_a6cab3a827924c0b146f7d80db0cd28f9}\label{main_8cpp_a6cab3a827924c0b146f7d80db0cd28f9}} 
+\index{main.cpp@{main.cpp}!strafez@{strafez}}
+\index{strafez@{strafez}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{strafez}{strafez}}
+{\footnotesize\ttfamily float strafez =0}
+
+\mbox{\Hypertarget{main_8cpp_a169b9f06ff313a85f57f45c8bb9a2159}\label{main_8cpp_a169b9f06ff313a85f57f45c8bb9a2159}} 
+\index{main.cpp@{main.cpp}!texid@{texid}}
+\index{texid@{texid}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{texid}{texid}}
+{\footnotesize\ttfamily G\+Luint texid}
+

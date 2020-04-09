@@ -1,0 +1,90 @@
+\hypertarget{image__helper_8c}{}\doxysection{image\+\_\+helper.\+c File Reference}
+\label{image__helper_8c}\index{image\_helper.c@{image\_helper.c}}
+{\ttfamily \#include \char`\"{}image\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{image__helper_8c_ac7c214f2228eb4e92bf5a61caca5c98f}{up\+\_\+scale\+\_\+image}} (const unsigned char $\ast$const orig, int width, int height, int channels, unsigned char $\ast$resampled, int resampled\+\_\+width, int resampled\+\_\+height)
+\item 
+int \mbox{\hyperlink{image__helper_8c_a24b70c49f373fbc42e2fb32ff7f0139d}{mipmap\+\_\+image}} (const unsigned char $\ast$const orig, int width, int height, int channels, unsigned char $\ast$resampled, int block\+\_\+size\+\_\+x, int block\+\_\+size\+\_\+y)
+\item 
+int \mbox{\hyperlink{image__helper_8c_a222857dd9c71ab6aeb1fadbce6ac48e8}{scale\+\_\+image\+\_\+\+R\+G\+B\+\_\+to\+\_\+\+N\+T\+S\+C\+\_\+safe}} (unsigned char $\ast$orig, int width, int height, int channels)
+\item 
+unsigned char \mbox{\hyperlink{image__helper_8c_ad273049aeddffb46748bd21f7ff6a63a}{clamp\+\_\+byte}} (int x)
+\item 
+int \mbox{\hyperlink{image__helper_8c_a7b8dd37ed77de5266cf7d43fecdaff7e}{convert\+\_\+\+R\+G\+B\+\_\+to\+\_\+\+Y\+Co\+Cg}} (unsigned char $\ast$orig, int width, int height, int channels)
+\item 
+int \mbox{\hyperlink{image__helper_8c_ace3ce2a5b009f3b01a5eb59aeb3bdeaa}{convert\+\_\+\+Y\+Co\+Cg\+\_\+to\+\_\+\+R\+GB}} (unsigned char $\ast$orig, int width, int height, int channels)
+\item 
+float \mbox{\hyperlink{image__helper_8c_a253d79034ffb36c0d0183f03cab229a8}{find\+\_\+max\+\_\+\+R\+G\+BE}} (unsigned char $\ast$image, int width, int height)
+\item 
+int \mbox{\hyperlink{image__helper_8c_a10478e32cd0e54e7ea300738a475e6e5}{R\+G\+B\+E\+\_\+to\+\_\+\+R\+G\+BdivA}} (unsigned char $\ast$image, int width, int height, int rescale\+\_\+to\+\_\+max)
+\item 
+int \mbox{\hyperlink{image__helper_8c_ac03eb90e8670d99b2a0d9849c2466891}{R\+G\+B\+E\+\_\+to\+\_\+\+R\+G\+Bdiv\+A2}} (unsigned char $\ast$image, int width, int height, int rescale\+\_\+to\+\_\+max)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{image__helper_8c_ad273049aeddffb46748bd21f7ff6a63a}\label{image__helper_8c_ad273049aeddffb46748bd21f7ff6a63a}} 
+\index{image\_helper.c@{image\_helper.c}!clamp\_byte@{clamp\_byte}}
+\index{clamp\_byte@{clamp\_byte}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{clamp\_byte()}{clamp\_byte()}}
+{\footnotesize\ttfamily unsigned char clamp\+\_\+byte (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image__helper_8c_a7b8dd37ed77de5266cf7d43fecdaff7e}\label{image__helper_8c_a7b8dd37ed77de5266cf7d43fecdaff7e}} 
+\index{image\_helper.c@{image\_helper.c}!convert\_RGB\_to\_YCoCg@{convert\_RGB\_to\_YCoCg}}
+\index{convert\_RGB\_to\_YCoCg@{convert\_RGB\_to\_YCoCg}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{convert\_RGB\_to\_YCoCg()}{convert\_RGB\_to\_YCoCg()}}
+{\footnotesize\ttfamily int convert\+\_\+\+R\+G\+B\+\_\+to\+\_\+\+Y\+Co\+Cg (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{orig,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+This function takes the R\+GB components of the image and converts them into Y\+Co\+Cg. 3 components will be re-\/ordered to Co\+Y\+Cg (for optimum D\+X\+T1 compression), while 4 components will be ordered Co\+Cg\+AY (for D\+X\+T5 compression). \mbox{\Hypertarget{image__helper_8c_ace3ce2a5b009f3b01a5eb59aeb3bdeaa}\label{image__helper_8c_ace3ce2a5b009f3b01a5eb59aeb3bdeaa}} 
+\index{image\_helper.c@{image\_helper.c}!convert\_YCoCg\_to\_RGB@{convert\_YCoCg\_to\_RGB}}
+\index{convert\_YCoCg\_to\_RGB@{convert\_YCoCg\_to\_RGB}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{convert\_YCoCg\_to\_RGB()}{convert\_YCoCg\_to\_RGB()}}
+{\footnotesize\ttfamily int convert\+\_\+\+Y\+Co\+Cg\+\_\+to\+\_\+\+R\+GB (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{orig,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+This function takes the Y\+Co\+Cg components of the image and converts them into R\+GB. See above. \mbox{\Hypertarget{image__helper_8c_a253d79034ffb36c0d0183f03cab229a8}\label{image__helper_8c_a253d79034ffb36c0d0183f03cab229a8}} 
+\index{image\_helper.c@{image\_helper.c}!find\_max\_RGBE@{find\_max\_RGBE}}
+\index{find\_max\_RGBE@{find\_max\_RGBE}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{find\_max\_RGBE()}{find\_max\_RGBE()}}
+{\footnotesize\ttfamily float find\+\_\+max\+\_\+\+R\+G\+BE (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{image,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{image__helper_8c_a24b70c49f373fbc42e2fb32ff7f0139d}\label{image__helper_8c_a24b70c49f373fbc42e2fb32ff7f0139d}} 
+\index{image\_helper.c@{image\_helper.c}!mipmap\_image@{mipmap\_image}}
+\index{mipmap\_image@{mipmap\_image}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{mipmap\_image()}{mipmap\_image()}}
+{\footnotesize\ttfamily int mipmap\+\_\+image (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{orig,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{unsigned char $\ast$}]{resampled,  }\item[{int}]{block\+\_\+size\+\_\+x,  }\item[{int}]{block\+\_\+size\+\_\+y }\end{DoxyParamCaption})}
+
+This function downscales an image. Used for creating M\+I\+Pmaps, the incoming image should be a power-\/of-\/two sized. \mbox{\Hypertarget{image__helper_8c_a10478e32cd0e54e7ea300738a475e6e5}\label{image__helper_8c_a10478e32cd0e54e7ea300738a475e6e5}} 
+\index{image\_helper.c@{image\_helper.c}!RGBE\_to\_RGBdivA@{RGBE\_to\_RGBdivA}}
+\index{RGBE\_to\_RGBdivA@{RGBE\_to\_RGBdivA}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{RGBE\_to\_RGBdivA()}{RGBE\_to\_RGBdivA()}}
+{\footnotesize\ttfamily int R\+G\+B\+E\+\_\+to\+\_\+\+R\+G\+BdivA (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{image,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{rescale\+\_\+to\+\_\+max }\end{DoxyParamCaption})}
+
+Converts an H\+DR image from an array of unsigned chars (R\+G\+BE) to R\+G\+BdivA \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{image__helper_8c_ac03eb90e8670d99b2a0d9849c2466891}\label{image__helper_8c_ac03eb90e8670d99b2a0d9849c2466891}} 
+\index{image\_helper.c@{image\_helper.c}!RGBE\_to\_RGBdivA2@{RGBE\_to\_RGBdivA2}}
+\index{RGBE\_to\_RGBdivA2@{RGBE\_to\_RGBdivA2}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{RGBE\_to\_RGBdivA2()}{RGBE\_to\_RGBdivA2()}}
+{\footnotesize\ttfamily int R\+G\+B\+E\+\_\+to\+\_\+\+R\+G\+Bdiv\+A2 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{image,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{rescale\+\_\+to\+\_\+max }\end{DoxyParamCaption})}
+
+Converts an H\+DR image from an array of unsigned chars (R\+G\+BE) to R\+G\+Bdiv\+A2 \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{image__helper_8c_a222857dd9c71ab6aeb1fadbce6ac48e8}\label{image__helper_8c_a222857dd9c71ab6aeb1fadbce6ac48e8}} 
+\index{image\_helper.c@{image\_helper.c}!scale\_image\_RGB\_to\_NTSC\_safe@{scale\_image\_RGB\_to\_NTSC\_safe}}
+\index{scale\_image\_RGB\_to\_NTSC\_safe@{scale\_image\_RGB\_to\_NTSC\_safe}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{scale\_image\_RGB\_to\_NTSC\_safe()}{scale\_image\_RGB\_to\_NTSC\_safe()}}
+{\footnotesize\ttfamily int scale\+\_\+image\+\_\+\+R\+G\+B\+\_\+to\+\_\+\+N\+T\+S\+C\+\_\+safe (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{orig,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+This function takes the R\+GB components of the image and scales each channel from \mbox{[}0,255\mbox{]} to \mbox{[}16,235\mbox{]}. This makes the colors \char`\"{}\+Safe\char`\"{} for display on N\+T\+SC displays. Note that this is {\itshape N\+OT} a good idea for loading images like normal-\/ or height-\/maps! \mbox{\Hypertarget{image__helper_8c_ac7c214f2228eb4e92bf5a61caca5c98f}\label{image__helper_8c_ac7c214f2228eb4e92bf5a61caca5c98f}} 
+\index{image\_helper.c@{image\_helper.c}!up\_scale\_image@{up\_scale\_image}}
+\index{up\_scale\_image@{up\_scale\_image}!image\_helper.c@{image\_helper.c}}
+\doxysubsubsection{\texorpdfstring{up\_scale\_image()}{up\_scale\_image()}}
+{\footnotesize\ttfamily int up\+\_\+scale\+\_\+image (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{orig,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{unsigned char $\ast$}]{resampled,  }\item[{int}]{resampled\+\_\+width,  }\item[{int}]{resampled\+\_\+height }\end{DoxyParamCaption})}
+
+This function upscales an image. Not to be used to create M\+I\+Pmaps, but to make it square, or to make it a power-\/of-\/two sized. 

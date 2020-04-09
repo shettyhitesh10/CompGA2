@@ -1,0 +1,627 @@
+\hypertarget{_s_o_i_l_8c}{}\doxysection{S\+O\+I\+L.\+c File Reference}
+\label{_s_o_i_l_8c}\index{SOIL.c@{SOIL.c}}
+{\ttfamily \#include $<$G\+L/gl.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L/glx.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}S\+O\+I\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stb\+\_\+image\+\_\+aug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}image\+\_\+\+D\+X\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a67e822f43b88c75a4e39c36b7cff8745}{S\+O\+I\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+G\+L\+\_\+\+E\+R\+R\+O\+RS}}~0
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a0c2410bb61ee9e3052e6646b366d6210}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+W\+R\+A\+P\+\_\+R}}~0x8072
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_ac894a7ed47490a872856f1c4b74b9bfa}{S\+O\+I\+L\+\_\+\+C\+L\+A\+M\+P\+\_\+\+T\+O\+\_\+\+E\+D\+GE}}~0x812F
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a7be863011a1e05cfb5fabf441d82924e}{S\+O\+I\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+M\+AP}}~0x8511
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_abffc1cdd1519d3c0b285de37ea5c0009}{S\+O\+I\+L\+\_\+\+R\+E\+F\+L\+E\+C\+T\+I\+O\+N\+\_\+\+M\+AP}}~0x8512
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_ab9e3a41f04f36d23bc49500fa59a4b03}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+AP}}~0x8513
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a977acfca35b63b8b208b4ae7a9233f23}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+B\+I\+N\+D\+I\+N\+G\+\_\+\+C\+U\+B\+E\+\_\+\+M\+AP}}~0x8514
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_abbda4230c8e9c4e102c51ac9bd24c80e}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+P\+O\+S\+I\+T\+I\+V\+E\+\_\+X}}~0x8515
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a563e3880982b6b1a53bb8efe6d454fcc}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+X}}~0x8516
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a544997e0fec9ccc54741079ce50c2f98}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+P\+O\+S\+I\+T\+I\+V\+E\+\_\+Y}}~0x8517
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a5cb309c3f7c41d2567105713b5404af6}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+Y}}~0x8518
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a4919d7230e0c74b75891e99207d6c6c1}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+P\+O\+S\+I\+T\+I\+V\+E\+\_\+Z}}~0x8519
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a6033f6571fe8a197e8418eab2b773afa}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+Z}}~0x851A
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a7edbebcb4a5dd3fc080b4327d91582e5}{S\+O\+I\+L\+\_\+\+P\+R\+O\+X\+Y\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+AP}}~0x851B
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a4a1179876f26355fff68eed39c553e39}{S\+O\+I\+L\+\_\+\+M\+A\+X\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+I\+ZE}}~0x851C
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a8ab7349e43c41c1ec28811ed69da3f5a}{S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+A\+RB}}~0x84\+F5
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a46410ae696408369edcfb941eae1f1e5}{S\+O\+I\+L\+\_\+\+M\+A\+X\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+A\+RB}}~0x84\+F8
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_ac859b465885a268fc4ee74f2cd0e284d}{S\+O\+I\+L\+\_\+\+R\+G\+B\+\_\+\+S3\+T\+C\+\_\+\+D\+X\+T1}}~0x83\+F0
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a52920d0b552c98b5a8b4d5d53eec86d8}{S\+O\+I\+L\+\_\+\+R\+G\+B\+A\+\_\+\+S3\+T\+C\+\_\+\+D\+X\+T1}}~0x83\+F1
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_a371dad8ab9afb8e434b8937e7b7bc1f2}{S\+O\+I\+L\+\_\+\+R\+G\+B\+A\+\_\+\+S3\+T\+C\+\_\+\+D\+X\+T3}}~0x83\+F2
+\item 
+\#define \mbox{\hyperlink{_s_o_i_l_8c_ad5b0fa8dc96fcd891a4cb658fea9da0f}{S\+O\+I\+L\+\_\+\+R\+G\+B\+A\+\_\+\+S3\+T\+C\+\_\+\+D\+X\+T5}}~0x83\+F3
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(A\+P\+I\+E\+N\+T\+RY $\ast$ \mbox{\hyperlink{_s_o_i_l_8c_a169dc543d904fb975d03904da8d51314}{P\+\_\+\+S\+O\+I\+L\+\_\+\+G\+L\+C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+T\+E\+X\+I\+M\+A\+G\+E2\+D\+P\+R\+OC}}) (G\+Lenum target, G\+Lint level, G\+Lenum internalformat, G\+Lsizei width, G\+Lsizei height, G\+Lint border, G\+Lsizei image\+Size, const G\+Lvoid $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5a0b1952a738d67bbae61ef29b09058d30}{S\+O\+I\+L\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+U\+N\+K\+N\+O\+WN}} = -\/1, 
+\mbox{\hyperlink{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5a0a7467aedffad4fda3b2da86d77897b9}{S\+O\+I\+L\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5ab0767ccf6657310ead5e0d0a443e5621}{S\+O\+I\+L\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+E\+S\+E\+NT}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_s_o_i_l_8c_a07bd4fa2d6ed44d28218fde2d222dfd7}{query\+\_\+cubemap\+\_\+capability}} (void)
+\item 
+int \mbox{\hyperlink{_s_o_i_l_8c_acd8a0a5e4c1465f6553c3e15c36e5499}{query\+\_\+\+N\+P\+O\+T\+\_\+capability}} (void)
+\item 
+int \mbox{\hyperlink{_s_o_i_l_8c_afb18f89ef93ab9767338d0ab6941d452}{query\+\_\+tex\+\_\+rectangle\+\_\+capability}} (void)
+\item 
+int \mbox{\hyperlink{_s_o_i_l_8c_a555122dec7c72eb8ca53ce00d08fb0f5}{query\+\_\+\+D\+X\+T\+\_\+capability}} (void)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_a9e2e6ccef1ab50e6e2844ccd4d60d403}{S\+O\+I\+L\+\_\+direct\+\_\+load\+\_\+\+D\+DS}} (const char $\ast$filename, unsigned int reuse\+\_\+texture\+\_\+\+ID, int flags, int loading\+\_\+as\+\_\+cubemap)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_a1a03e763ce3b0b4dcc236ccdf26478f8}{S\+O\+I\+L\+\_\+direct\+\_\+load\+\_\+\+D\+D\+S\+\_\+from\+\_\+memory}} (const unsigned char $\ast$const buffer, int buffer\+\_\+length, unsigned int reuse\+\_\+texture\+\_\+\+ID, int flags, int loading\+\_\+as\+\_\+cubemap)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_abcfb607fcc35688c1652be7d0c9a1f23}{S\+O\+I\+L\+\_\+internal\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture}} (const unsigned char $\ast$const data, int width, int height, int channels, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags, unsigned int opengl\+\_\+texture\+\_\+type, unsigned int opengl\+\_\+texture\+\_\+target, unsigned int texture\+\_\+check\+\_\+size\+\_\+enum)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_a67332563e7bbbabb1fc194ffadbb9a46}{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture}} (const char $\ast$filename, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_a4220f2dc1a1dcffb9628165626854231}{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture}} (const char $\ast$filename, int fake\+\_\+\+H\+D\+R\+\_\+format, int rescale\+\_\+to\+\_\+max, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_aa5bce2b445500ec50658258c5149e7b3}{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory}} (const unsigned char $\ast$const buffer, int buffer\+\_\+length, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_af7696abc4c7a08046d134b9298f56912}{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap}} (const char $\ast$x\+\_\+pos\+\_\+file, const char $\ast$x\+\_\+neg\+\_\+file, const char $\ast$y\+\_\+pos\+\_\+file, const char $\ast$y\+\_\+neg\+\_\+file, const char $\ast$z\+\_\+pos\+\_\+file, const char $\ast$z\+\_\+neg\+\_\+file, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_a78b856b61ebe281e04f0ef7e31eba62f}{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory}} (const unsigned char $\ast$const x\+\_\+pos\+\_\+buffer, int x\+\_\+pos\+\_\+buffer\+\_\+length, const unsigned char $\ast$const x\+\_\+neg\+\_\+buffer, int x\+\_\+neg\+\_\+buffer\+\_\+length, const unsigned char $\ast$const y\+\_\+pos\+\_\+buffer, int y\+\_\+pos\+\_\+buffer\+\_\+length, const unsigned char $\ast$const y\+\_\+neg\+\_\+buffer, int y\+\_\+neg\+\_\+buffer\+\_\+length, const unsigned char $\ast$const z\+\_\+pos\+\_\+buffer, int z\+\_\+pos\+\_\+buffer\+\_\+length, const unsigned char $\ast$const z\+\_\+neg\+\_\+buffer, int z\+\_\+neg\+\_\+buffer\+\_\+length, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_a4d0d9be497a367f8f5a7220810070a5b}{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap}} (const char $\ast$filename, const char face\+\_\+order\mbox{[}6\mbox{]}, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_ab5ac6a8205b2f028e8446ab324299a4c}{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory}} (const unsigned char $\ast$const buffer, int buffer\+\_\+length, const char face\+\_\+order\mbox{[}6\mbox{]}, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_afddd2bf49325dbc6651a91a711c21e2b}{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap}} (const unsigned char $\ast$const data, int width, int height, int channels, const char face\+\_\+order\mbox{[}6\mbox{]}, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+unsigned int \mbox{\hyperlink{_s_o_i_l_8c_aaf6cbce2068dd298d25899ae0f2f23ad}{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture}} (const unsigned char $\ast$const data, int width, int height, int channels, unsigned int reuse\+\_\+texture\+\_\+\+ID, unsigned int flags)
+\item 
+void \mbox{\hyperlink{_s_o_i_l_8c_a75e4e8956529187424baf8377e60d4c0}{check\+\_\+for\+\_\+\+G\+L\+\_\+errors}} (const char $\ast$calling\+\_\+location)
+\item 
+int \mbox{\hyperlink{_s_o_i_l_8c_a7a6f690a1ecde64938acd89d568f10f7}{S\+O\+I\+L\+\_\+save\+\_\+screenshot}} (const char $\ast$filename, int image\+\_\+type, int x, int y, int width, int height)
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{_s_o_i_l_8c_a4d4896f10fbd9792b01209f44bf630d3}{S\+O\+I\+L\+\_\+load\+\_\+image}} (const char $\ast$filename, int $\ast$width, int $\ast$height, int $\ast$channels, int force\+\_\+channels)
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{_s_o_i_l_8c_a328dc188f3318a0b7732909e48e037f8}{S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory}} (const unsigned char $\ast$const buffer, int buffer\+\_\+length, int $\ast$width, int $\ast$height, int $\ast$channels, int force\+\_\+channels)
+\item 
+int \mbox{\hyperlink{_s_o_i_l_8c_a6a90a5aa17ca3ef1de1d87e1ed365d11}{S\+O\+I\+L\+\_\+save\+\_\+image}} (const char $\ast$filename, int image\+\_\+type, int width, int height, int channels, const unsigned char $\ast$const data)
+\item 
+void \mbox{\hyperlink{_s_o_i_l_8c_acd82ef0d8148f5b18f413a59440dafdd}{S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data}} (unsigned char $\ast$img\+\_\+data)
+\item 
+const char $\ast$ \mbox{\hyperlink{_s_o_i_l_8c_a06e69e28c11a5bb21d8ea5e9590c729a}{S\+O\+I\+L\+\_\+last\+\_\+result}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{_s_o_i_l_8c_ae8136d7352e80db9d3d6e681bf7c76ab}{result\+\_\+string\+\_\+pointer}} = \char`\"{}S\+O\+IL initialized\char`\"{}
+\item 
+\mbox{\hyperlink{_s_o_i_l_8c_a169dc543d904fb975d03904da8d51314}{P\+\_\+\+S\+O\+I\+L\+\_\+\+G\+L\+C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+T\+E\+X\+I\+M\+A\+G\+E2\+D\+P\+R\+OC}} \mbox{\hyperlink{_s_o_i_l_8c_a21054b30a8cb9d9c43c8155d40825d88}{soil\+Gl\+Compressed\+Tex\+Image2D}} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_o_i_l_8c_a67e822f43b88c75a4e39c36b7cff8745}\label{_s_o_i_l_8c_a67e822f43b88c75a4e39c36b7cff8745}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_CHECK\_FOR\_GL\_ERRORS@{SOIL\_CHECK\_FOR\_GL\_ERRORS}}
+\index{SOIL\_CHECK\_FOR\_GL\_ERRORS@{SOIL\_CHECK\_FOR\_GL\_ERRORS}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_CHECK\_FOR\_GL\_ERRORS}{SOIL\_CHECK\_FOR\_GL\_ERRORS}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+O\+R\+\_\+\+G\+L\+\_\+\+E\+R\+R\+O\+RS~0}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_ac894a7ed47490a872856f1c4b74b9bfa}\label{_s_o_i_l_8c_ac894a7ed47490a872856f1c4b74b9bfa}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_CLAMP\_TO\_EDGE@{SOIL\_CLAMP\_TO\_EDGE}}
+\index{SOIL\_CLAMP\_TO\_EDGE@{SOIL\_CLAMP\_TO\_EDGE}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_CLAMP\_TO\_EDGE}{SOIL\_CLAMP\_TO\_EDGE}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+C\+L\+A\+M\+P\+\_\+\+T\+O\+\_\+\+E\+D\+GE~0x812F}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a4a1179876f26355fff68eed39c553e39}\label{_s_o_i_l_8c_a4a1179876f26355fff68eed39c553e39}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_MAX\_CUBE\_MAP\_TEXTURE\_SIZE@{SOIL\_MAX\_CUBE\_MAP\_TEXTURE\_SIZE}}
+\index{SOIL\_MAX\_CUBE\_MAP\_TEXTURE\_SIZE@{SOIL\_MAX\_CUBE\_MAP\_TEXTURE\_SIZE}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_MAX\_CUBE\_MAP\_TEXTURE\_SIZE}{SOIL\_MAX\_CUBE\_MAP\_TEXTURE\_SIZE}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+M\+A\+X\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+I\+ZE~0x851C}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a46410ae696408369edcfb941eae1f1e5}\label{_s_o_i_l_8c_a46410ae696408369edcfb941eae1f1e5}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_MAX\_RECTANGLE\_TEXTURE\_SIZE\_ARB@{SOIL\_MAX\_RECTANGLE\_TEXTURE\_SIZE\_ARB}}
+\index{SOIL\_MAX\_RECTANGLE\_TEXTURE\_SIZE\_ARB@{SOIL\_MAX\_RECTANGLE\_TEXTURE\_SIZE\_ARB}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_MAX\_RECTANGLE\_TEXTURE\_SIZE\_ARB}{SOIL\_MAX\_RECTANGLE\_TEXTURE\_SIZE\_ARB}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+M\+A\+X\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+A\+RB~0x84\+F8}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a7be863011a1e05cfb5fabf441d82924e}\label{_s_o_i_l_8c_a7be863011a1e05cfb5fabf441d82924e}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_NORMAL\_MAP@{SOIL\_NORMAL\_MAP}}
+\index{SOIL\_NORMAL\_MAP@{SOIL\_NORMAL\_MAP}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_NORMAL\_MAP}{SOIL\_NORMAL\_MAP}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+M\+AP~0x8511}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a7edbebcb4a5dd3fc080b4327d91582e5}\label{_s_o_i_l_8c_a7edbebcb4a5dd3fc080b4327d91582e5}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_PROXY\_TEXTURE\_CUBE\_MAP@{SOIL\_PROXY\_TEXTURE\_CUBE\_MAP}}
+\index{SOIL\_PROXY\_TEXTURE\_CUBE\_MAP@{SOIL\_PROXY\_TEXTURE\_CUBE\_MAP}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_PROXY\_TEXTURE\_CUBE\_MAP}{SOIL\_PROXY\_TEXTURE\_CUBE\_MAP}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+P\+R\+O\+X\+Y\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+AP~0x851B}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_abffc1cdd1519d3c0b285de37ea5c0009}\label{_s_o_i_l_8c_abffc1cdd1519d3c0b285de37ea5c0009}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_REFLECTION\_MAP@{SOIL\_REFLECTION\_MAP}}
+\index{SOIL\_REFLECTION\_MAP@{SOIL\_REFLECTION\_MAP}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_REFLECTION\_MAP}{SOIL\_REFLECTION\_MAP}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+R\+E\+F\+L\+E\+C\+T\+I\+O\+N\+\_\+\+M\+AP~0x8512}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_ac859b465885a268fc4ee74f2cd0e284d}\label{_s_o_i_l_8c_ac859b465885a268fc4ee74f2cd0e284d}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_RGB\_S3TC\_DXT1@{SOIL\_RGB\_S3TC\_DXT1}}
+\index{SOIL\_RGB\_S3TC\_DXT1@{SOIL\_RGB\_S3TC\_DXT1}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_RGB\_S3TC\_DXT1}{SOIL\_RGB\_S3TC\_DXT1}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+R\+G\+B\+\_\+\+S3\+T\+C\+\_\+\+D\+X\+T1~0x83\+F0}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a52920d0b552c98b5a8b4d5d53eec86d8}\label{_s_o_i_l_8c_a52920d0b552c98b5a8b4d5d53eec86d8}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_RGBA\_S3TC\_DXT1@{SOIL\_RGBA\_S3TC\_DXT1}}
+\index{SOIL\_RGBA\_S3TC\_DXT1@{SOIL\_RGBA\_S3TC\_DXT1}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_RGBA\_S3TC\_DXT1}{SOIL\_RGBA\_S3TC\_DXT1}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+R\+G\+B\+A\+\_\+\+S3\+T\+C\+\_\+\+D\+X\+T1~0x83\+F1}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a371dad8ab9afb8e434b8937e7b7bc1f2}\label{_s_o_i_l_8c_a371dad8ab9afb8e434b8937e7b7bc1f2}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_RGBA\_S3TC\_DXT3@{SOIL\_RGBA\_S3TC\_DXT3}}
+\index{SOIL\_RGBA\_S3TC\_DXT3@{SOIL\_RGBA\_S3TC\_DXT3}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_RGBA\_S3TC\_DXT3}{SOIL\_RGBA\_S3TC\_DXT3}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+R\+G\+B\+A\+\_\+\+S3\+T\+C\+\_\+\+D\+X\+T3~0x83\+F2}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_ad5b0fa8dc96fcd891a4cb658fea9da0f}\label{_s_o_i_l_8c_ad5b0fa8dc96fcd891a4cb658fea9da0f}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_RGBA\_S3TC\_DXT5@{SOIL\_RGBA\_S3TC\_DXT5}}
+\index{SOIL\_RGBA\_S3TC\_DXT5@{SOIL\_RGBA\_S3TC\_DXT5}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_RGBA\_S3TC\_DXT5}{SOIL\_RGBA\_S3TC\_DXT5}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+R\+G\+B\+A\+\_\+\+S3\+T\+C\+\_\+\+D\+X\+T5~0x83\+F3}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a977acfca35b63b8b208b4ae7a9233f23}\label{_s_o_i_l_8c_a977acfca35b63b8b208b4ae7a9233f23}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_BINDING\_CUBE\_MAP@{SOIL\_TEXTURE\_BINDING\_CUBE\_MAP}}
+\index{SOIL\_TEXTURE\_BINDING\_CUBE\_MAP@{SOIL\_TEXTURE\_BINDING\_CUBE\_MAP}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_BINDING\_CUBE\_MAP}{SOIL\_TEXTURE\_BINDING\_CUBE\_MAP}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+B\+I\+N\+D\+I\+N\+G\+\_\+\+C\+U\+B\+E\+\_\+\+M\+AP~0x8514}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_ab9e3a41f04f36d23bc49500fa59a4b03}\label{_s_o_i_l_8c_ab9e3a41f04f36d23bc49500fa59a4b03}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_CUBE\_MAP@{SOIL\_TEXTURE\_CUBE\_MAP}}
+\index{SOIL\_TEXTURE\_CUBE\_MAP@{SOIL\_TEXTURE\_CUBE\_MAP}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_CUBE\_MAP}{SOIL\_TEXTURE\_CUBE\_MAP}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+AP~0x8513}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a563e3880982b6b1a53bb8efe6d454fcc}\label{_s_o_i_l_8c_a563e3880982b6b1a53bb8efe6d454fcc}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_X@{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_X}}
+\index{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_X@{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_X}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_X}{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_X}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+X~0x8516}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a5cb309c3f7c41d2567105713b5404af6}\label{_s_o_i_l_8c_a5cb309c3f7c41d2567105713b5404af6}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Y@{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Y}}
+\index{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Y@{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Y}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Y}{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Y}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+Y~0x8518}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a6033f6571fe8a197e8418eab2b773afa}\label{_s_o_i_l_8c_a6033f6571fe8a197e8418eab2b773afa}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Z@{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Z}}
+\index{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Z@{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Z}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Z}{SOIL\_TEXTURE\_CUBE\_MAP\_NEGATIVE\_Z}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+Z~0x851A}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_abbda4230c8e9c4e102c51ac9bd24c80e}\label{_s_o_i_l_8c_abbda4230c8e9c4e102c51ac9bd24c80e}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_X@{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_X}}
+\index{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_X@{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_X}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_X}{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_X}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+P\+O\+S\+I\+T\+I\+V\+E\+\_\+X~0x8515}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a544997e0fec9ccc54741079ce50c2f98}\label{_s_o_i_l_8c_a544997e0fec9ccc54741079ce50c2f98}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Y@{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Y}}
+\index{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Y@{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Y}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Y}{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Y}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+P\+O\+S\+I\+T\+I\+V\+E\+\_\+Y~0x8517}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a4919d7230e0c74b75891e99207d6c6c1}\label{_s_o_i_l_8c_a4919d7230e0c74b75891e99207d6c6c1}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Z@{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Z}}
+\index{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Z@{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Z}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Z}{SOIL\_TEXTURE\_CUBE\_MAP\_POSITIVE\_Z}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+C\+U\+B\+E\+\_\+\+M\+A\+P\+\_\+\+P\+O\+S\+I\+T\+I\+V\+E\+\_\+Z~0x8519}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a8ab7349e43c41c1ec28811ed69da3f5a}\label{_s_o_i_l_8c_a8ab7349e43c41c1ec28811ed69da3f5a}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_RECTANGLE\_ARB@{SOIL\_TEXTURE\_RECTANGLE\_ARB}}
+\index{SOIL\_TEXTURE\_RECTANGLE\_ARB@{SOIL\_TEXTURE\_RECTANGLE\_ARB}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_RECTANGLE\_ARB}{SOIL\_TEXTURE\_RECTANGLE\_ARB}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+A\+RB~0x84\+F5}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a0c2410bb61ee9e3052e6646b366d6210}\label{_s_o_i_l_8c_a0c2410bb61ee9e3052e6646b366d6210}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_TEXTURE\_WRAP\_R@{SOIL\_TEXTURE\_WRAP\_R}}
+\index{SOIL\_TEXTURE\_WRAP\_R@{SOIL\_TEXTURE\_WRAP\_R}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_TEXTURE\_WRAP\_R}{SOIL\_TEXTURE\_WRAP\_R}}
+{\footnotesize\ttfamily \#define S\+O\+I\+L\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+W\+R\+A\+P\+\_\+R~0x8072}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_s_o_i_l_8c_a169dc543d904fb975d03904da8d51314}\label{_s_o_i_l_8c_a169dc543d904fb975d03904da8d51314}} 
+\index{SOIL.c@{SOIL.c}!P\_SOIL\_GLCOMPRESSEDTEXIMAGE2DPROC@{P\_SOIL\_GLCOMPRESSEDTEXIMAGE2DPROC}}
+\index{P\_SOIL\_GLCOMPRESSEDTEXIMAGE2DPROC@{P\_SOIL\_GLCOMPRESSEDTEXIMAGE2DPROC}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{P\_SOIL\_GLCOMPRESSEDTEXIMAGE2DPROC}{P\_SOIL\_GLCOMPRESSEDTEXIMAGE2DPROC}}
+{\footnotesize\ttfamily typedef void(A\+P\+I\+E\+N\+T\+RY $\ast$ P\+\_\+\+S\+O\+I\+L\+\_\+\+G\+L\+C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+T\+E\+X\+I\+M\+A\+G\+E2\+D\+P\+R\+OC) (G\+Lenum target, G\+Lint level, G\+Lenum internalformat, G\+Lsizei width, G\+Lsizei height, G\+Lint border, G\+Lsizei image\+Size, const G\+Lvoid $\ast$data)}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5}\label{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOIL\_CAPABILITY\_UNKNOWN@{SOIL\_CAPABILITY\_UNKNOWN}!SOIL.c@{SOIL.c}}\index{SOIL.c@{SOIL.c}!SOIL\_CAPABILITY\_UNKNOWN@{SOIL\_CAPABILITY\_UNKNOWN}}}\mbox{\Hypertarget{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5a0b1952a738d67bbae61ef29b09058d30}\label{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5a0b1952a738d67bbae61ef29b09058d30}} 
+S\+O\+I\+L\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+U\+N\+K\+N\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOIL\_CAPABILITY\_NONE@{SOIL\_CAPABILITY\_NONE}!SOIL.c@{SOIL.c}}\index{SOIL.c@{SOIL.c}!SOIL\_CAPABILITY\_NONE@{SOIL\_CAPABILITY\_NONE}}}\mbox{\Hypertarget{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5a0a7467aedffad4fda3b2da86d77897b9}\label{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5a0a7467aedffad4fda3b2da86d77897b9}} 
+S\+O\+I\+L\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOIL\_CAPABILITY\_PRESENT@{SOIL\_CAPABILITY\_PRESENT}!SOIL.c@{SOIL.c}}\index{SOIL.c@{SOIL.c}!SOIL\_CAPABILITY\_PRESENT@{SOIL\_CAPABILITY\_PRESENT}}}\mbox{\Hypertarget{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5ab0767ccf6657310ead5e0d0a443e5621}\label{_s_o_i_l_8c_a99fb83031ce9923c84392b4e92f956b5ab0767ccf6657310ead5e0d0a443e5621}} 
+S\+O\+I\+L\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+E\+S\+E\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_o_i_l_8c_a75e4e8956529187424baf8377e60d4c0}\label{_s_o_i_l_8c_a75e4e8956529187424baf8377e60d4c0}} 
+\index{SOIL.c@{SOIL.c}!check\_for\_GL\_errors@{check\_for\_GL\_errors}}
+\index{check\_for\_GL\_errors@{check\_for\_GL\_errors}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{check\_for\_GL\_errors()}{check\_for\_GL\_errors()}}
+{\footnotesize\ttfamily void check\+\_\+for\+\_\+\+G\+L\+\_\+errors (\begin{DoxyParamCaption}\item[{const char $\ast$}]{calling\+\_\+location }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a07bd4fa2d6ed44d28218fde2d222dfd7}\label{_s_o_i_l_8c_a07bd4fa2d6ed44d28218fde2d222dfd7}} 
+\index{SOIL.c@{SOIL.c}!query\_cubemap\_capability@{query\_cubemap\_capability}}
+\index{query\_cubemap\_capability@{query\_cubemap\_capability}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{query\_cubemap\_capability()}{query\_cubemap\_capability()}}
+{\footnotesize\ttfamily int query\+\_\+cubemap\+\_\+capability (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a555122dec7c72eb8ca53ce00d08fb0f5}\label{_s_o_i_l_8c_a555122dec7c72eb8ca53ce00d08fb0f5}} 
+\index{SOIL.c@{SOIL.c}!query\_DXT\_capability@{query\_DXT\_capability}}
+\index{query\_DXT\_capability@{query\_DXT\_capability}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{query\_DXT\_capability()}{query\_DXT\_capability()}}
+{\footnotesize\ttfamily int query\+\_\+\+D\+X\+T\+\_\+capability (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_acd8a0a5e4c1465f6553c3e15c36e5499}\label{_s_o_i_l_8c_acd8a0a5e4c1465f6553c3e15c36e5499}} 
+\index{SOIL.c@{SOIL.c}!query\_NPOT\_capability@{query\_NPOT\_capability}}
+\index{query\_NPOT\_capability@{query\_NPOT\_capability}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{query\_NPOT\_capability()}{query\_NPOT\_capability()}}
+{\footnotesize\ttfamily int query\+\_\+\+N\+P\+O\+T\+\_\+capability (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_afb18f89ef93ab9767338d0ab6941d452}\label{_s_o_i_l_8c_afb18f89ef93ab9767338d0ab6941d452}} 
+\index{SOIL.c@{SOIL.c}!query\_tex\_rectangle\_capability@{query\_tex\_rectangle\_capability}}
+\index{query\_tex\_rectangle\_capability@{query\_tex\_rectangle\_capability}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{query\_tex\_rectangle\_capability()}{query\_tex\_rectangle\_capability()}}
+{\footnotesize\ttfamily int query\+\_\+tex\+\_\+rectangle\+\_\+capability (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_afddd2bf49325dbc6651a91a711c21e2b}\label{_s_o_i_l_8c_afddd2bf49325dbc6651a91a711c21e2b}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_create\_OGL\_single\_cubemap@{SOIL\_create\_OGL\_single\_cubemap}}
+\index{SOIL\_create\_OGL\_single\_cubemap@{SOIL\_create\_OGL\_single\_cubemap}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_create\_OGL\_single\_cubemap()}{SOIL\_create\_OGL\_single\_cubemap()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{data,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{const char}]{face\+\_\+order\mbox{[}6\mbox{]},  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Creates an Open\+GL cubemap texture by splitting up 1 image into 6 parts. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the raw data to be uploaded as an Open\+GL texture \\
+\hline
+{\em width} & the width of the image in pixels \\
+\hline
+{\em height} & the height of the image in pixels \\
+\hline
+{\em channels} & the number of channels\+: 1-\/luminous, 2-\/luminous/alpha, 3-\/R\+GB, 4-\/R\+G\+BA \\
+\hline
+{\em face\+\_\+order} & the order of the faces in the file, and combination of N\+S\+W\+E\+UD, for North, South, Up, etc. \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+CT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_aaf6cbce2068dd298d25899ae0f2f23ad}\label{_s_o_i_l_8c_aaf6cbce2068dd298d25899ae0f2f23ad}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_create\_OGL\_texture@{SOIL\_create\_OGL\_texture}}
+\index{SOIL\_create\_OGL\_texture@{SOIL\_create\_OGL\_texture}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_create\_OGL\_texture()}{SOIL\_create\_OGL\_texture()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{data,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Creates a 2D Open\+GL texture from raw image data. Note that the raw data is {\itshape N\+OT} freed after the upload (so the user can load various versions). 
+\begin{DoxyParams}{Parameters}
+{\em data} & the raw data to be uploaded as an Open\+GL texture \\
+\hline
+{\em width} & the width of the image in pixels \\
+\hline
+{\em height} & the height of the image in pixels \\
+\hline
+{\em channels} & the number of channels\+: 1-\/luminous, 2-\/luminous/alpha, 3-\/R\+GB, 4-\/R\+G\+BA \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_a9e2e6ccef1ab50e6e2844ccd4d60d403}\label{_s_o_i_l_8c_a9e2e6ccef1ab50e6e2844ccd4d60d403}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_direct\_load\_DDS@{SOIL\_direct\_load\_DDS}}
+\index{SOIL\_direct\_load\_DDS@{SOIL\_direct\_load\_DDS}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_direct\_load\_DDS()}{SOIL\_direct\_load\_DDS()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+direct\+\_\+load\+\_\+\+D\+DS (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{int}]{flags,  }\item[{int}]{loading\+\_\+as\+\_\+cubemap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a1a03e763ce3b0b4dcc236ccdf26478f8}\label{_s_o_i_l_8c_a1a03e763ce3b0b4dcc236ccdf26478f8}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_direct\_load\_DDS\_from\_memory@{SOIL\_direct\_load\_DDS\_from\_memory}}
+\index{SOIL\_direct\_load\_DDS\_from\_memory@{SOIL\_direct\_load\_DDS\_from\_memory}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_direct\_load\_DDS\_from\_memory()}{SOIL\_direct\_load\_DDS\_from\_memory()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+direct\+\_\+load\+\_\+\+D\+D\+S\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{buffer,  }\item[{int}]{buffer\+\_\+length,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{int}]{flags,  }\item[{int}]{loading\+\_\+as\+\_\+cubemap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_acd82ef0d8148f5b18f413a59440dafdd}\label{_s_o_i_l_8c_acd82ef0d8148f5b18f413a59440dafdd}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_free\_image\_data@{SOIL\_free\_image\_data}}
+\index{SOIL\_free\_image\_data@{SOIL\_free\_image\_data}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_free\_image\_data()}{SOIL\_free\_image\_data()}}
+{\footnotesize\ttfamily void S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{img\+\_\+data }\end{DoxyParamCaption})}
+
+Frees the image data (note, this is just C\textquotesingle{}s \char`\"{}free()\char`\"{}...this function is present mostly so C++ programmers don\textquotesingle{}t forget to use \char`\"{}free()\char`\"{} and call \char`\"{}delete \mbox{[}$\,$\mbox{]}\char`\"{} instead \mbox{[}8$^\wedge$) \mbox{\Hypertarget{_s_o_i_l_8c_abcfb607fcc35688c1652be7d0c9a1f23}\label{_s_o_i_l_8c_abcfb607fcc35688c1652be7d0c9a1f23}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_internal\_create\_OGL\_texture@{SOIL\_internal\_create\_OGL\_texture}}
+\index{SOIL\_internal\_create\_OGL\_texture@{SOIL\_internal\_create\_OGL\_texture}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_internal\_create\_OGL\_texture()}{SOIL\_internal\_create\_OGL\_texture()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+internal\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{data,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags,  }\item[{unsigned int}]{opengl\+\_\+texture\+\_\+type,  }\item[{unsigned int}]{opengl\+\_\+texture\+\_\+target,  }\item[{unsigned int}]{texture\+\_\+check\+\_\+size\+\_\+enum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a06e69e28c11a5bb21d8ea5e9590c729a}\label{_s_o_i_l_8c_a06e69e28c11a5bb21d8ea5e9590c729a}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_last\_result@{SOIL\_last\_result}}
+\index{SOIL\_last\_result@{SOIL\_last\_result}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_last\_result()}{SOIL\_last\_result()}}
+{\footnotesize\ttfamily const char$\ast$ S\+O\+I\+L\+\_\+last\+\_\+result (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function resturn a pointer to a string describing the last thing that happened inside S\+O\+IL. It can be used to determine why an image failed to load. \mbox{\Hypertarget{_s_o_i_l_8c_a4d4896f10fbd9792b01209f44bf630d3}\label{_s_o_i_l_8c_a4d4896f10fbd9792b01209f44bf630d3}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_image@{SOIL\_load\_image}}
+\index{SOIL\_load\_image@{SOIL\_load\_image}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_image()}{SOIL\_load\_image()}}
+{\footnotesize\ttfamily unsigned char$\ast$ S\+O\+I\+L\+\_\+load\+\_\+image (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{int $\ast$}]{channels,  }\item[{int}]{force\+\_\+channels }\end{DoxyParamCaption})}
+
+Loads an image from disk into an array of unsigned chars. Note that $\ast$channels return the original channel count of the image. If force\+\_\+channels was other than S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+TO, the resulting image has force\+\_\+channels, but $\ast$channels may be different (if the original image had a different channel count). \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_a328dc188f3318a0b7732909e48e037f8}\label{_s_o_i_l_8c_a328dc188f3318a0b7732909e48e037f8}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_image\_from\_memory@{SOIL\_load\_image\_from\_memory}}
+\index{SOIL\_load\_image\_from\_memory@{SOIL\_load\_image\_from\_memory}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_image\_from\_memory()}{SOIL\_load\_image\_from\_memory()}}
+{\footnotesize\ttfamily unsigned char$\ast$ S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{buffer,  }\item[{int}]{buffer\+\_\+length,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{int $\ast$}]{channels,  }\item[{int}]{force\+\_\+channels }\end{DoxyParamCaption})}
+
+Loads an image from memory into an array of unsigned chars. Note that $\ast$channels return the original channel count of the image. If force\+\_\+channels was other than S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+TO, the resulting image has force\+\_\+channels, but $\ast$channels may be different (if the original image had a different channel count). \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_af7696abc4c7a08046d134b9298f56912}\label{_s_o_i_l_8c_af7696abc4c7a08046d134b9298f56912}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_OGL\_cubemap@{SOIL\_load\_OGL\_cubemap}}
+\index{SOIL\_load\_OGL\_cubemap@{SOIL\_load\_OGL\_cubemap}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_OGL\_cubemap()}{SOIL\_load\_OGL\_cubemap()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap (\begin{DoxyParamCaption}\item[{const char $\ast$}]{x\+\_\+pos\+\_\+file,  }\item[{const char $\ast$}]{x\+\_\+neg\+\_\+file,  }\item[{const char $\ast$}]{y\+\_\+pos\+\_\+file,  }\item[{const char $\ast$}]{y\+\_\+neg\+\_\+file,  }\item[{const char $\ast$}]{z\+\_\+pos\+\_\+file,  }\item[{const char $\ast$}]{z\+\_\+neg\+\_\+file,  }\item[{int}]{force\+\_\+channels,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Loads 6 images from disk into an Open\+GL cubemap texture. 
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos\+\_\+file} & the name of the file to upload as the +x cube face \\
+\hline
+{\em x\+\_\+neg\+\_\+file} & the name of the file to upload as the -\/x cube face \\
+\hline
+{\em y\+\_\+pos\+\_\+file} & the name of the file to upload as the +y cube face \\
+\hline
+{\em y\+\_\+neg\+\_\+file} & the name of the file to upload as the -\/y cube face \\
+\hline
+{\em z\+\_\+pos\+\_\+file} & the name of the file to upload as the +z cube face \\
+\hline
+{\em z\+\_\+neg\+\_\+file} & the name of the file to upload as the -\/z cube face \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/R\+GB, 4-\/R\+G\+BA \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+CT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_a78b856b61ebe281e04f0ef7e31eba62f}\label{_s_o_i_l_8c_a78b856b61ebe281e04f0ef7e31eba62f}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_OGL\_cubemap\_from\_memory@{SOIL\_load\_OGL\_cubemap\_from\_memory}}
+\index{SOIL\_load\_OGL\_cubemap\_from\_memory@{SOIL\_load\_OGL\_cubemap\_from\_memory}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_OGL\_cubemap\_from\_memory()}{SOIL\_load\_OGL\_cubemap\_from\_memory()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{x\+\_\+pos\+\_\+buffer,  }\item[{int}]{x\+\_\+pos\+\_\+buffer\+\_\+length,  }\item[{const unsigned char $\ast$const}]{x\+\_\+neg\+\_\+buffer,  }\item[{int}]{x\+\_\+neg\+\_\+buffer\+\_\+length,  }\item[{const unsigned char $\ast$const}]{y\+\_\+pos\+\_\+buffer,  }\item[{int}]{y\+\_\+pos\+\_\+buffer\+\_\+length,  }\item[{const unsigned char $\ast$const}]{y\+\_\+neg\+\_\+buffer,  }\item[{int}]{y\+\_\+neg\+\_\+buffer\+\_\+length,  }\item[{const unsigned char $\ast$const}]{z\+\_\+pos\+\_\+buffer,  }\item[{int}]{z\+\_\+pos\+\_\+buffer\+\_\+length,  }\item[{const unsigned char $\ast$const}]{z\+\_\+neg\+\_\+buffer,  }\item[{int}]{z\+\_\+neg\+\_\+buffer\+\_\+length,  }\item[{int}]{force\+\_\+channels,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Loads 6 images from memory into an Open\+GL cubemap texture. 
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos\+\_\+buffer} & the image data in R\+AM to upload as the +x cube face \\
+\hline
+{\em x\+\_\+pos\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em x\+\_\+neg\+\_\+buffer} & the image data in R\+AM to upload as the +x cube face \\
+\hline
+{\em x\+\_\+neg\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em y\+\_\+pos\+\_\+buffer} & the image data in R\+AM to upload as the +x cube face \\
+\hline
+{\em y\+\_\+pos\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em y\+\_\+neg\+\_\+buffer} & the image data in R\+AM to upload as the +x cube face \\
+\hline
+{\em y\+\_\+neg\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em z\+\_\+pos\+\_\+buffer} & the image data in R\+AM to upload as the +x cube face \\
+\hline
+{\em z\+\_\+pos\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em z\+\_\+neg\+\_\+buffer} & the image data in R\+AM to upload as the +x cube face \\
+\hline
+{\em z\+\_\+neg\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/R\+GB, 4-\/R\+G\+BA \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+CT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_a4220f2dc1a1dcffb9628165626854231}\label{_s_o_i_l_8c_a4220f2dc1a1dcffb9628165626854231}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_OGL\_HDR\_texture@{SOIL\_load\_OGL\_HDR\_texture}}
+\index{SOIL\_load\_OGL\_HDR\_texture@{SOIL\_load\_OGL\_HDR\_texture}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_OGL\_HDR\_texture()}{SOIL\_load\_OGL\_HDR\_texture()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int}]{fake\+\_\+\+H\+D\+R\+\_\+format,  }\item[{int}]{rescale\+\_\+to\+\_\+max,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Loads an H\+DR image from disk into an Open\+GL texture. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to upload as a texture \\
+\hline
+{\em fake\+\_\+\+H\+D\+R\+\_\+format} & S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+BE, S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+BdivA, S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2 \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_a4d0d9be497a367f8f5a7220810070a5b}\label{_s_o_i_l_8c_a4d0d9be497a367f8f5a7220810070a5b}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_OGL\_single\_cubemap@{SOIL\_load\_OGL\_single\_cubemap}}
+\index{SOIL\_load\_OGL\_single\_cubemap@{SOIL\_load\_OGL\_single\_cubemap}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_OGL\_single\_cubemap()}{SOIL\_load\_OGL\_single\_cubemap()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char}]{face\+\_\+order\mbox{[}6\mbox{]},  }\item[{int}]{force\+\_\+channels,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Loads 1 image from disk and splits it into an Open\+GL cubemap texture. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to upload as a texture \\
+\hline
+{\em face\+\_\+order} & the order of the faces in the file, any combination of N\+S\+W\+E\+UD, for North, South, Up, etc. \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/R\+GB, 4-\/R\+G\+BA \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+CT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_ab5ac6a8205b2f028e8446ab324299a4c}\label{_s_o_i_l_8c_ab5ac6a8205b2f028e8446ab324299a4c}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_OGL\_single\_cubemap\_from\_memory@{SOIL\_load\_OGL\_single\_cubemap\_from\_memory}}
+\index{SOIL\_load\_OGL\_single\_cubemap\_from\_memory@{SOIL\_load\_OGL\_single\_cubemap\_from\_memory}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_OGL\_single\_cubemap\_from\_memory()}{SOIL\_load\_OGL\_single\_cubemap\_from\_memory()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{buffer,  }\item[{int}]{buffer\+\_\+length,  }\item[{const char}]{face\+\_\+order\mbox{[}6\mbox{]},  }\item[{int}]{force\+\_\+channels,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Loads 1 image from R\+AM and splits it into an Open\+GL cubemap texture. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the image data in R\+AM just as if it were still in a file \\
+\hline
+{\em buffer\+\_\+length} & the size of the buffer in bytes \\
+\hline
+{\em face\+\_\+order} & the order of the faces in the file, any combination of N\+S\+W\+E\+UD, for North, South, Up, etc. \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/R\+GB, 4-\/R\+G\+BA \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+CT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_a67332563e7bbbabb1fc194ffadbb9a46}\label{_s_o_i_l_8c_a67332563e7bbbabb1fc194ffadbb9a46}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_OGL\_texture@{SOIL\_load\_OGL\_texture}}
+\index{SOIL\_load\_OGL\_texture@{SOIL\_load\_OGL\_texture}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_OGL\_texture()}{SOIL\_load\_OGL\_texture()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int}]{force\+\_\+channels,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Loads an image from disk into an Open\+GL texture. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to upload as a texture \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/R\+GB, 4-\/R\+G\+BA \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+CT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_aa5bce2b445500ec50658258c5149e7b3}\label{_s_o_i_l_8c_aa5bce2b445500ec50658258c5149e7b3}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_load\_OGL\_texture\_from\_memory@{SOIL\_load\_OGL\_texture\_from\_memory}}
+\index{SOIL\_load\_OGL\_texture\_from\_memory@{SOIL\_load\_OGL\_texture\_from\_memory}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_load\_OGL\_texture\_from\_memory()}{SOIL\_load\_OGL\_texture\_from\_memory()}}
+{\footnotesize\ttfamily unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$const}]{buffer,  }\item[{int}]{buffer\+\_\+length,  }\item[{int}]{force\+\_\+channels,  }\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+ID,  }\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+
+Loads an image from R\+AM into an Open\+GL texture. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the image data in R\+AM just as if it were still in a file \\
+\hline
+{\em buffer\+\_\+length} & the size of the buffer in bytes \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/R\+GB, 4-\/R\+G\+BA \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+ID} & 0-\/generate a new texture ID, otherwise reuse the texture ID (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+WO $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+PS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+TS $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+HA $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+XT $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+CT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the Open\+GL texture handle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_a6a90a5aa17ca3ef1de1d87e1ed365d11}\label{_s_o_i_l_8c_a6a90a5aa17ca3ef1de1d87e1ed365d11}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_save\_image@{SOIL\_save\_image}}
+\index{SOIL\_save\_image@{SOIL\_save\_image}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_save\_image()}{SOIL\_save\_image()}}
+{\footnotesize\ttfamily int S\+O\+I\+L\+\_\+save\+\_\+image (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int}]{image\+\_\+type,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{channels,  }\item[{const unsigned char $\ast$const}]{data }\end{DoxyParamCaption})}
+
+Saves an image from an array of unsigned chars (R\+G\+BA) to disk \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_o_i_l_8c_a7a6f690a1ecde64938acd89d568f10f7}\label{_s_o_i_l_8c_a7a6f690a1ecde64938acd89d568f10f7}} 
+\index{SOIL.c@{SOIL.c}!SOIL\_save\_screenshot@{SOIL\_save\_screenshot}}
+\index{SOIL\_save\_screenshot@{SOIL\_save\_screenshot}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{SOIL\_save\_screenshot()}{SOIL\_save\_screenshot()}}
+{\footnotesize\ttfamily int S\+O\+I\+L\+\_\+save\+\_\+screenshot (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int}]{image\+\_\+type,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+Captures the Open\+GL window (R\+GB) and saves it to disk \begin{DoxyReturn}{Returns}
+0 if it failed, otherwise returns 1 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_s_o_i_l_8c_ae8136d7352e80db9d3d6e681bf7c76ab}\label{_s_o_i_l_8c_ae8136d7352e80db9d3d6e681bf7c76ab}} 
+\index{SOIL.c@{SOIL.c}!result\_string\_pointer@{result\_string\_pointer}}
+\index{result\_string\_pointer@{result\_string\_pointer}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{result\_string\_pointer}{result\_string\_pointer}}
+{\footnotesize\ttfamily char$\ast$ result\+\_\+string\+\_\+pointer = \char`\"{}S\+O\+IL initialized\char`\"{}}
+
+\mbox{\Hypertarget{_s_o_i_l_8c_a21054b30a8cb9d9c43c8155d40825d88}\label{_s_o_i_l_8c_a21054b30a8cb9d9c43c8155d40825d88}} 
+\index{SOIL.c@{SOIL.c}!soilGlCompressedTexImage2D@{soilGlCompressedTexImage2D}}
+\index{soilGlCompressedTexImage2D@{soilGlCompressedTexImage2D}!SOIL.c@{SOIL.c}}
+\doxysubsubsection{\texorpdfstring{soilGlCompressedTexImage2D}{soilGlCompressedTexImage2D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_o_i_l_8c_a169dc543d904fb975d03904da8d51314}{P\+\_\+\+S\+O\+I\+L\+\_\+\+G\+L\+C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+T\+E\+X\+I\+M\+A\+G\+E2\+D\+P\+R\+OC}} soil\+Gl\+Compressed\+Tex\+Image2D = N\+U\+LL}
+

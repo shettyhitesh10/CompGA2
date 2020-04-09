@@ -1,0 +1,60 @@
+\hypertarget{_vector3_8h}{}\doxysection{Vector3.\+h File Reference}
+\label{_vector3_8h}\index{Vector3.h@{Vector3.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_vector3}{Vector3}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector3}{Vector3}} \mbox{\hyperlink{_vector3_8h_a5dbc39cfe1baf83de8c5f9ffad36559a}{operator$\ast$}} (float s, const \mbox{\hyperlink{class_vector3}{Vector3}} \&v)
+\begin{DoxyCompactList}\small\item\em Multiply a scalar by a Vec3. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_vector3_8h_aca42c8e18e84ab85b703f7557ba1097f}{dot}} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&a, const \mbox{\hyperlink{class_vector3}{Vector3}} \&b)
+\begin{DoxyCompactList}\small\item\em The dot product of two Vec3s. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector3}{Vector3}} \mbox{\hyperlink{_vector3_8h_a6621291ff8a6a90e2e3f92c1b5bed64e}{cross}} (const \mbox{\hyperlink{class_vector3}{Vector3}} \&a, const \mbox{\hyperlink{class_vector3}{Vector3}} \&b)
+\begin{DoxyCompactList}\small\item\em The cross product of two Vec3s. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{_vector3_8h_a6b8025c0424ba8db565d3153d8dc9c0e}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_vector3}{Vector3}} \&v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_vector3_8h_a6621291ff8a6a90e2e3f92c1b5bed64e}\label{_vector3_8h_a6621291ff8a6a90e2e3f92c1b5bed64e}} 
+\index{Vector3.h@{Vector3.h}!cross@{cross}}
+\index{cross@{cross}!Vector3.h@{Vector3.h}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3}{Vector3}} cross (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The cross product of two Vec3s. 
+
+\mbox{\Hypertarget{_vector3_8h_aca42c8e18e84ab85b703f7557ba1097f}\label{_vector3_8h_aca42c8e18e84ab85b703f7557ba1097f}} 
+\index{Vector3.h@{Vector3.h}!dot@{dot}}
+\index{dot@{dot}!Vector3.h@{Vector3.h}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily float dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The dot product of two Vec3s. 
+
+\mbox{\Hypertarget{_vector3_8h_a5dbc39cfe1baf83de8c5f9ffad36559a}\label{_vector3_8h_a5dbc39cfe1baf83de8c5f9ffad36559a}} 
+\index{Vector3.h@{Vector3.h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector3.h@{Vector3.h}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector3}{Vector3}} operator$\ast$ (\begin{DoxyParamCaption}\item[{float}]{s,  }\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiply a scalar by a Vec3. 
+
+\mbox{\Hypertarget{_vector3_8h_a6b8025c0424ba8db565d3153d8dc9c0e}\label{_vector3_8h_a6b8025c0424ba8db565d3153d8dc9c0e}} 
+\index{Vector3.h@{Vector3.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Vector3.h@{Vector3.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_vector3}{Vector3}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
